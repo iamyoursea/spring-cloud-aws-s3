@@ -30,3 +30,5 @@ out/
 
 ### VS Code ###
 .vscode/
+
+#appplication-aws.yml  # 필수 입니다 (예시를 위해 제외)
