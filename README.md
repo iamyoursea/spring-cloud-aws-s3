@@ -6,8 +6,8 @@
 ## 개발환경
 * Windows 10
 * JDK 1.8
-* Spring boot 2.2
-* Gradle 5.6.4
+* Spring boot 2.3.1
+* Gradle 6.4.1
 * Intellj IDEA 2019.1
 
 개인 블로그: [Blog](https://willseungh0.tistory.com/manage/newpost/2?type=post&returnURL=https%3A%2F%2Fwillseungh0.tistory.com%2F2)
