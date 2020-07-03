@@ -10,4 +10,4 @@
 * Gradle 6.4.1
 * Intellj IDEA 2019.1
 
-개인 블로그: [Blog](https://willseungh0.tistory.com/manage/newpost/2?type=post&returnURL=https%3A%2F%2Fwillseungh0.tistory.com%2F2)
+개인 블로그: [Blog](https://willseungh0.tistory.com/2)
