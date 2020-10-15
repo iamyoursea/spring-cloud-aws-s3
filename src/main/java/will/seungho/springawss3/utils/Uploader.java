@@ -1,4 +1,4 @@
-package will.seungho.springawss3.component;
+package will.seungho.springawss3.utils;
 
 import org.springframework.web.multipart.MultipartFile;
 

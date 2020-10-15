@@ -1,4 +1,4 @@
-package will.seungho.springawss3.component;
+package will.seungho.springawss3.utils;
 
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.CannedAccessControlList;

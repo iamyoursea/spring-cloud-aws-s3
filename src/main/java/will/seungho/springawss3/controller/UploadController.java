@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import will.seungho.springawss3.component.Uploader;
+import will.seungho.springawss3.utils.Uploader;
 
 import java.io.IOException;
 
