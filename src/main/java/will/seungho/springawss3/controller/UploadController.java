@@ -16,8 +16,8 @@ public class UploadController {
 	private final Uploader uploader;
 
 	@PostMapping("/api/v1/upload")
-	public ApiResponse<String> upload(@RequestParam("data") MultipartFile file) throws IOException {
-		return ApiResponse.of(uploader.upload(file, "static"));
+	public String upload(@RequestParam("data") MultipartFile file) throws IOException {
+		return uploader.upload(file, "static");
 	}
 
 }
