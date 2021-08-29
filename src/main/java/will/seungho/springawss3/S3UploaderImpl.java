@@ -1,13 +1,13 @@
-package will.seungho.springawss3.utils;
+package will.seungho.springawss3;
 
-import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.CannedAccessControlList;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-import will.seungho.springawss3.utils.dto.component.S3UploadComponent;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,8 +20,10 @@ public class S3UploaderImpl implements Uploader {
 
 	private final static String TEMP_FILE_PATH = "src/main/resources/";
 
-	private final AmazonS3Client amazonS3Client;
-	private final S3UploadComponent s3UploadComponent;
+	@Value("${cloud.aws.s3.bucket}")
+	private String bucket;
+
+	private final AmazonS3 amazonS3;
 
 	public String upload(MultipartFile multipartFile, String dirName) throws IOException {
 		File convertedFile = convert(multipartFile);
@@ -36,8 +38,8 @@ public class S3UploaderImpl implements Uploader {
 	}
 
 	private String putS3(File uploadFile, String fileName) {
-		amazonS3Client.putObject(new PutObjectRequest(s3UploadComponent.getBucket(), fileName, uploadFile).withCannedAcl(CannedAccessControlList.PublicRead));
-		return amazonS3Client.getUrl(s3UploadComponent.getBucket(), fileName).toString();
+		amazonS3.putObject(new PutObjectRequest(bucket, fileName, uploadFile).withCannedAcl(CannedAccessControlList.PublicRead));
+		return amazonS3.getUrl(bucket, fileName).toString();
 	}
 
 	private void removeNewFile(File targetFile) {

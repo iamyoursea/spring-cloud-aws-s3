@@ -1,7 +1,7 @@
 cloud:
   aws:
     s3:
-      bucket: willseungh0-blog
+      bucket: bucketName
     region:
       static: ap-northeast-2
     stack:
